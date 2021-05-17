@@ -1,6 +1,6 @@
 import './styles.css';
 import menu from './menu.json';
-import colorCard from '../templates/card.hbs';
+import colorCard from './templates/card.hbs';
 
 const menuEl = document.querySelector('.js-menu');
 const cardMurkup = creatMenuMurkUp(menu);
@@ -42,5 +42,7 @@ function onChecked() {
     if (body.classList.value === Theme.DARK) {
       check.checked = true;
     }
+  } else {
+    body.classList.add(Theme.LIGHT);
   }
 }
